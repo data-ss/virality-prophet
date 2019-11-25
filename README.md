@@ -2,7 +2,7 @@
 
 ### Project: DSI 5 Toronto Hackathon - Virality Prophet (YouTube)
 
-Scenario: This is a NLP-based classification project where we trained a classifier to predict whether a new YouTube video will go viral or not.
+Scenario: This is a NLP-based classification project where we trained a classifier to predict whether a new YouTube video will go viral or not (based on certain accepted inputs).
 
 Following that we Pickled the trained classifier, designed a simple front-end to interact with it by accepting user inputs via Flask/Jinja, and hosted the entire package on Heroku.
 
