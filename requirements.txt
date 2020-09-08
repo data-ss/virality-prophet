@@ -4,3 +4,4 @@ pandas==0.25.3
 catboost==0.17.5
 sklearn_pandas==1.8.0
 scikit_learn==0.23.2
+gunicorn
