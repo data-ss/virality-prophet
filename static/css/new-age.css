@@ -345,20 +345,20 @@ section.contact ul.list-social li a {
   border-radius: 100%;
 }
 
-section.contact ul.list-social li.social-twitter a {
-  background-color: #1da1f2;
+section.contact ul.list-social li.social-github a {
+  background-color: #000000;
 }
 
-section.contact ul.list-social li.social-twitter a:hover {
-  background-color: #0d95e8;
+section.contact ul.list-social li.social-github a:hover {
+  background-color: #696969;
 }
 
-section.contact ul.list-social li.social-facebook a {
-  background-color: #3b5998;
+section.contact ul.list-social li.social-linkedin a {
+  background-color: #00BFFF;
 }
 
-section.contact ul.list-social li.social-facebook a:hover {
-  background-color: #344e86;
+section.contact ul.list-social li.social-linkedin a:hover {
+  background-color: #00008B;
 }
 
 section.contact ul.list-social li.social-google-plus a {

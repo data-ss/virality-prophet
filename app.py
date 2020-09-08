@@ -77,9 +77,10 @@ def predict():
     if predicted == 1:
         prediction = "YOUR LEFT STROKE JUST WENT VIRAL!!"
     else:
-        prediction = "Sit down, be humble. Probably not gonna go viral."
+        prediction = "It won't go viral but, DON'T GIVE UP!"
+    scroll = "verdict"
     # prediction = '{:,.2f}%'.format(prediction)
-    return render_template('index.html', prediction=prediction)
+    return render_template('index.html', prediction=prediction, scroll=scroll)
 
 
 

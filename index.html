@@ -25,39 +25,7 @@
 
   <!-- Custom styles for this template -->
   <link href="{{ url_for('static', filename='css/new-age.min.css') }}" rel="stylesheet">
-  <!-- <script src="{{ url_for('static', filename='js/selectize.js') }}" type="text/javascript"></script> -->
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.11/css/select2.min.css" rel="stylesheet" /> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.11/js/select2.min.js"></script> -->
-  <!-- <script src="{{ url_for('static', filename='js/selectize.js') }}" type="text/javascript"></script> -->
-  <!-- <link href="{{ url_for('static', filename='css/selectize.css') }}" rel="stylesheet" type="text/css" /> -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-
-  <!-- Stylesheet -->
-<!-- <link rel="stylesheet" ruins font
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-      crossorigin="anonymous"> -->
-<!-- <link href="{{ url_for('static', filename='tags/tagsinput.css') }}" rel="stylesheet" type="text/css">
-
-<! JavaScript -->
-<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous">
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
-        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-        crossorigin="anonymous">
-</script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
-        integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-        crossorigin="anonymous">
-</script>
-<script src="{{ url_for('static', filename='tags/tagsinput.js') }}"></script> -->
-<!-- <script>focusClass: 'focus',itemValue: function(item) {return item ? item.toString() : item;}</script> -->
-
-
-
-
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon_io/favicon.ico') }}">
 
 </head>
 
@@ -73,12 +41,6 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#download">Download</a>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#features">Features</a>
-          </li> -->
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
@@ -98,15 +60,9 @@
         </div>
         <div class="col-lg-5 my-auto">
           <div class="device-container">
-            <!-- <div class="device-mockup iphone6_plus portrait white"> -->
               <div class="device">
                 <div class="screen">
                   <img src="static/img/ball.gif" class="img-fluid" alt="">
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <!-- <img src="img/demo-screen-1.jpg" class="img-fluid" alt=""> -->
-                </div>
-                <div class="button">
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
                 </div>
               </div>
             </div>
@@ -123,18 +79,14 @@
           <h2 class="section-heading">Discover how to make your video BUZZ!</h2>
           <p>Our app can be run on any mobile device!</p>
           <p>Input your video details below!</p>
-          <!-- <h2 class="section-heading">Discover what all the buzz is about!</h2>
-          <p>Our app is available on any mobile device! Download now to get started!</p>
-          <div class="badges">
-            <a class="badge-link" href="#"><img src="img/google-play-badge.svg" alt=""></a>
-            <a class="badge-link" href="#"><img src="img/app-store-badge.svg" alt=""></a> -->
 
             <form action = "/" method="POST">
 
-              <div class="container">
-              <!-- <label class="text-muted" for="date">Upload Day: -->
-              <p class="text-muted">Upload Day:
-              <select name="date" value="Friday">
+
+              <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Upload Day: </label>
+              <div class="col-sm-10">
+              <select name="date" value="Friday" class="form-control">
                 <option value='Monday'>Monday</option>
                  <option value='Tuesday'>Tuesday</option>
                  <option value='Wednesday'>Wednesday</option>
@@ -142,15 +94,16 @@
                 <option value='Friday'>Friday</option>
                 <option value='Saturday'>Saturday</option>
                 <option value='Sunday'>Sunday</option>
-               </select></label>
-              <!-- <input id="today" type="date" name="date">
-                <script>document.querySelector("#today").valueAsDate = new Date().toLocaleDateString();
-                </script> -->
-              </div>
+               </select>
+             </div>
+        </div>
 <br>
-              <div>
-                <p class="text-muted">Category:
-                <select class="js-example-basic-single" name="category" value='Music'>
+          <div id="verdict">
+
+              <div class ="form-group row">
+                <label class="col-sm-2 col-form-label">Category: </label>
+                <div class="col-sm-10">
+                <select class="form-control" name="category" value='Music'>
                   <option value='Film & Animation'>Film & Animation</option>
                    <option value='Autos & Vehicles'>Autos & Vehicles</option>
                    <option value='Music'>Music</option>
@@ -184,165 +137,53 @@
                    <option value='Shows'>Shows</option>
                    <option value='Trailers'>Trailers</option>
                 </select>
-                <!-- // In your Javascript (external .js resource or <script> tag) -->
-
+                </div>
               </div><br>
 
-              <!-- <div>
-                <label class="text-muted" for="Tags">Video Tags (press Enter to key in new tag):
-                <style>
-                    body {
-                        font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-                    }
-
-                    .tags-input-wrapper {
-                        background: #f9f9f9;
-                        padding: 10px;
-                        border-radius: 4px;
-                        max-width: 400px;
-                        border: 1px solid #ccc
-                    }
-
-                    .tags-input-wrapper input {
-                        border: none;
-                        background: transparent;
-                        outline: none;
-                        width: 150px;
-                    }
-
-                    .tags-input-wrapper .tag {
-                        display: inline-block;
-                        background-color: #009432;
-                        color: white;
-                        border-radius: 40px;
-                        padding: 0px 3px 0px 7px;
-                        margin-right: 5px;
-                        margin-bottom: 5px;
-                    }
-
-                    .tags-input-wrapper .tag a {
-                        margin: 0 7px 2px;
-                        display: inline-block;
-                        cursor: pointer;
-                    }
-                </style>
-
-                <input type="text" id="tag-input" name="tags" placeholder="Press Enter to enter new tag">
-                  <script src="{{ url_for('static', filename='js/index.js') }}"></script>
-                <script>var tagInput = new TagsInput({selector: 'tag-input', duplicate: false});</script>
-              </label>
-              </div> -->
-                <!-- <div>
-
-                <input name="tags" type="text" data-role="tagsinput" placeholder="Input your video tags here"> -->
-
-              <!-- <select name="tags" multiple data-role="tagsinput" placeholder="Input your video tags here">
-                <option value="YouTube">YouTube</option>
-              </select> -->
-            <!-- </div> -->
-
-            <div class="container">
-              <!-- <label class="text-muted" for="Video Title">Video Title: </label> -->
-              <p class="text-muted">Video Title:
-              <input type="text" name="title" maxlength=100 placeholder="Your video title (max 100 char.)" size=50>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Video Title: </label>
+              <div class="col-sm-10">
+              <input class="form-control" type="text" name="title" maxlength=100 placeholder="Your video title (max 100 char.)" size=50>
+            </div>
+            </div>
                 <br>
-              <p class="text-muted">Tags:
-              <textarea type="text" name="vidtags" maxlength=5000 rows="6", cols="50" wrap="soft">YouTube </textarea>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Tags: </label>
+              <div class="col-sm-10">
+              <textarea class="form-control" type="text" name="vidtags" maxlength=5000 rows="6", cols="50" wrap="soft">YouTube </textarea>
+            </div>
             </div>
 
-<!-- <img src="{{ url_for('static', filename='img/yt.png') }}"> -->
 
-              <div class="button">
+              <div class="button" style="color: black;">
                 <!-- <button type="button" value="submit">My Button</button> -->
-              <p><input class="btn btn-outline btn-xl js-scroll-trigger" type="submit" value="PREDICT!"/></p>
+              <input class="btn btn-outline-dark btn-xl js-scroll-trigger" type="submit" value="PREDICT!"/>
               </div>
             </form>
-
-
 
             <div class="feature-item">
               {% if prediction %}
               <br>
-              <!-- <div style="float:right; align:center;"> -->
               <h3 class="section-heading text-center">Verdict: {{ prediction }}</h3>
-              <!-- </div> -->
+              {% if scroll %}
+              <script type="text/javascript">
+                  document.location.hash = '#' + '{{ scroll }}';
+              </script>
+              {% endif %}
               {% endif %}
               </div>
-
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- <section class="features" id="features">
-    <div class="container">
-      <div class="section-heading text-center">
-        <h2>Unlimited Features, Unlimited Fun</h2>
-        <p class="text-muted">Check out what you can do with this app theme!</p>
-        <hr>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 my-auto">
-          <div class="device-container">
-            <div class="device-mockup iphone6_plus portrait white">
-              <div class="device">
-                <div class="screen"> -->
-                  <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                  <!-- <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="button"> -->
-                  <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                <!-- </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-8 my-auto">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-screen-smartphone text-primary"></i>
-                  <h3>Device Mockups</h3> -->
-                  <!-- <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-camera text-primary"></i>
-                  <h3>Flexible Use</h3>
-                  <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-present text-primary"></i>
-                  <h3>Free to Use</h3>
-                  <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="feature-item">
-                  <i class="icon-lock-open text-primary"></i>
-                  <h3>Open Source</h3>
-                  <p class="text-muted">Since this theme is MIT licensed, you can use it commercially!</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
   <section class="cta">
     <div class="cta-content">
       <div class="container">
         <h2>If you like this tool, give us a thumbs up!</h2>
-        <a href="#predict" class="btn btn-outline btn-xl js-scroll-trigger">Get Started!</a>
+        <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Get Started!</a>
       </div>
     </div>
     <div class="overlay"></div>
@@ -354,19 +195,14 @@
         <i class="fas fa-heart"></i>
         new friends!</h2>
       <ul class="list-inline list-social">
-        <li class="list-inline-item social-twitter">
-          <a href="#">
-            <i class="fab fa-twitter"></i>
+        <li class="list-inline-item social-github">
+          <a href="https://github.com/data-ss">
+            <i class="fab fa-github"></i>
           </a>
         </li>
-        <li class="list-inline-item social-facebook">
-          <a href="#">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </li>
-        <li class="list-inline-item social-google-plus">
-          <a href="#">
-            <i class="fab fa-google-plus-g"></i>
+        <li class="list-inline-item social-linkedin">
+          <a href="https://www.linkedin.com/in/knty/">
+            <i class="fab fa-linkedin"></i>
           </a>
         </li>
       </ul>
@@ -375,18 +211,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; Ryan & Anika @ General Assembly Toronto 2019. All Rights Reserved.</p>
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <a href="#">Privacy</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#">Terms</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="#">FAQ</a>
-        </li>
-      </ul>
+      <p>&copy; Ryan @ General Assembly Toronto 2019. All Rights Reserved.</p>
     </div>
   </footer>
 
@@ -398,9 +223,6 @@
   <script src="{{ url_for('static', filename='vendor/jquery-easing/jquery.easing.min.js') }}"></script>
   // <!-- Custom scripts for this template -->
   <script src="{{ url_for('static', filename='js/new-age.min.js') }}"></script>
-  <!-- <script>$(document).ready(function() {$('.js-example-basic-single').select2();}); $(document).ready(function() {
-      $('.js-example-basic-multiple').select2();
-    });</script> -->
 </body>
 
 </html>
