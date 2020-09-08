@@ -4,5 +4,5 @@ numpy==1.18.1
 pandas==0.25.3
 Flask==1.1.1
 scikit_learn==0.23.2
-Pickle==0.21.3
+pickle==0.21.3
 gunicorn
