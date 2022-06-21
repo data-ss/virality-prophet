@@ -2,6 +2,6 @@ pandas==0.25.3
 sklearn_pandas==1.8.0
 catboost==0.17.5
 Flask==1.1.1
-numpy==1.18.1
+numpy==1.22.0
 scikit_learn==0.21.3
 gunicorn
